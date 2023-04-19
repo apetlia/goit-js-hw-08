@@ -15,3 +15,9 @@ export function createGallaryListHTML(items) {
     })
     .join('');
 }
+
+export function getDataFromLocalStorage(storageKey) {
+  const savedData = localStorage.getItem(storageKey);
+
+  return savedData ? JSON.parse(savedData) : {};
+}
